@@ -1,0 +1,71 @@
+
+<!doctype html>
+
+<html lang="en">
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <title>
+    
+  </title>
+  <style>
+
+	  #pause-vid{
+
+        display: none;
+    }
+
+    
+  </style>
+
+  <script type="text/javascript">
+
+  	$(document).ready(function(){
+
+  		$("#play-vid").click(function(){
+
+        $(this).hide();
+
+          $("#pause-vid").show();
+  			
+            $("#bart")[0].play();
+
+  		});
+
+      $("#pause-vid").click(function(){
+
+        $(this).hide();
+
+          $("#bart")[0].play();
+
+      });
+
+      $("bart").on("ende",function(){
+
+        $("#play-vid").show();
+
+          $("pause-vid").hide();
+
+      });
+
+
+  	})
+    
+  </script>
+</head>
+
+<body>
+
+		<button id="play-vid">PLAY</button>
+		<button id="pause-vid">PAUSE</button>
+
+		<br />
+		<br />
+
+		<video id="bart" width="360" height="640">
+		  <source src="bart.mp4" type="video/mp4">
+		</video>
+	
+
+
+</body>
+</html>

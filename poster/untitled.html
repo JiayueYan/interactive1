@@ -1,0 +1,109 @@
+
+<!doctype html>
+
+<html lang="en">
+<head>
+
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <title>
+    Examples - Hover
+  </title>
+  <style>
+
+	body {
+		font-family: 'Noto Sans', sans-serif;
+	}
+
+	.container {
+		width: 600px;
+		margin: 0 auto;
+		overflow: visible;
+	}
+
+    .box {
+    	float: left;
+    	transition: all 0.5s ease;
+		background-color: #CCC;
+		color: #666;
+		margin: 25px;
+    	text-align: center;
+    	font-size: 12px;
+    	line-height: 150px;
+    	width: 600px;
+    	height: 600px;
+    	position: relative;
+        ;
+    }
+
+
+	/* DIVIDE */
+    .divide {
+    	position: relative;
+    	background-color: #FFF;
+         background-image: url('test.jpg');
+    }
+    .divide .title {
+    	position: absolute;
+    	text-align: center;
+    	width: 100%;
+    	z-index: 1;
+    }
+    .divide .grid {
+    	transition: all 0.5s ease;
+    	width: 33%;
+    	box-sizing: border-box; /* allows width to not be affected by border width */
+    	float: left;
+    	background-color: #CCC;
+    	border: 1px solid #999;
+    	height: 33%;
+
+    }
+    .divide:hover .grid {
+    	transform: scale(0.5);
+    }
+
+    
+
+  </style>
+
+  <script>
+  	/* This is a script to enable KEEP */
+  	$( document ).ready(function() {
+		$('.keep').hover(function() {
+		    $(this).addClass('on-hover');
+		});
+	});
+  </script>
+</head>
+
+<body>
+
+<div class="container">
+
+	
+
+	<div class="box divide">
+		<div class="title"></div>
+
+
+
+		<div class="grid"><img src="20131021181634_AdUcy.thumb.600_0.jpg"></div>
+		<div class="grid"></div>
+		<div class="grid"></div>
+
+		<div class="grid"></div>
+		<div class="grid"></div>
+		<div class="grid"></div>
+
+		<div class="grid"></div>
+		<div class="grid"></div>
+		<div class="grid"></div>
+	</div>
+
+
+</div>
+
+</body>
+</html>
